@@ -7,6 +7,31 @@ int main() {
 
   //ARRAYS 
 
+  // multi-dimension arrays 
+  cout << "======== looping multi-dimensional arrays =======" << endl;
+
+  string letters[2][2][4] = {
+    {
+      { "A", "B", "C", "D" },
+      { "E", "F", "G", "H" },
+    },
+    {
+      { "I", "J", "K", "L" },
+      { "M", "N", "O", "P" },
+    }
+  };
+
+  for (int i = 0; i < 2; i++) {
+    for (int j = 0; j < 2; j++) {
+      for (int k = 0; k < 4; k++)
+      {
+        cout << letters[i][j][k] << endl;
+      }      
+    }
+  }
+
+
+
 
   // finding an average of the given ages;
 
