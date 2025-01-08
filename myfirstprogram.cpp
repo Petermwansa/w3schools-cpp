@@ -2,58 +2,186 @@
 #include <string>
 using namespace std;
 
+
+
+  struct car {
+    string brand;
+    string model;
+    int year;
+  };
+
+
 int main() {
 
 
-  //ARRAYS 
+  // WORKING WITH STRUCTS 
 
-  // multi-dimension arrays 
-  cout << "======== looping multi-dimensional arrays =======" << endl;
+  car car1;
 
-  string letters[2][2][4] = {
-    {
-      { "A", "B", "C", "D" },
-      { "E", "F", "G", "H" },
-    },
-    {
-      { "I", "J", "K", "L" },
-      { "M", "N", "O", "P" },
-    }
-  };
+  car1.brand = "Ferrari";
+  cout << "My car is a: " << car1.brand << endl;
 
-  for (int i = 0; i < 2; i++) {
-    for (int j = 0; j < 2; j++) {
-      for (int k = 0; k < 4; k++)
-      {
-        cout << letters[i][j][k] << endl;
-      }      
-    }
-  }
+
+  struct {
+    int age;
+    string firstName;
+    string lastName;
+  } myDetails;
+  
+  myDetails.age = 26;
+  myDetails.firstName = "Peter";
+  myDetails.lastName = "Mwansa";
+
+  cout << "My age is: " << myDetails.age << endl;
 
 
 
 
-  // finding an average of the given ages;
-
-  cout << "======== PRINTING THE AVERAGE AGE =======";
-
-  int ages[8] = {20, 22, 18, 35, 48, 26, 87, 70};
-  float avg, sum = 0;
-
-  int length = sizeof(ages) / sizeof(ages[0]);
-
-  for (int age : ages) {
-    sum += age;
-  }
-
-  avg = sum / length;
-
-  cout << "The sum of the ages is: " << sum << endl;
-  cout << "The length of the array is: " << length << endl;
-  cout << "The average age of the entries is: " << avg << endl;
 
 
-  cout << "======== END OF PRINTING THE AVERAGE AGE =======";
+
+
+
+
+
+
+
+
+
+
+
+
+  // // An array storing different ages and finding the lowest and the highest
+  // int ages[8] = {20, 22, 18, 1, 48, 26, 12, 70};
+
+  // int i;
+
+  // // Get the length of the array
+  // int length = sizeof(ages) / sizeof(ages[0]);
+
+  // // Create a variable and assign the first array element of ages to it
+  // int highestAge = ages[0];
+  // int lowestAge = ages[0];
+
+  // // Loop through the elements of the ages array to find the lowest age
+  // for (int age : ages) {
+  //   if (highestAge < age) {
+  //     highestAge = age;
+  //   }
+  //   if (lowestAge > age) {
+  //     lowestAge = age;
+  //   }
+  // }
+
+
+  // // Print the lowest age
+  // cout << "The highest age is: " << highestAge << "\n";
+  // cout << "The lowest age is: " << lowestAge << "\n";
+
+
+
+  // //ARRAYS 
+  // cout << "======== HITTING GAME STARTS =======" << endl;
+
+  // bool ships[4][4] = {
+  //   { 0, 1, 1, 0 },
+  //   { 0, 0, 0, 0 },
+  //   { 0, 0, 1, 0 },
+  //   { 0, 0, 1, 0 }
+  // };
+
+  // // Keep track of how many hits the player has and how many turns they have played in these variables
+  // int hits = 0;
+  // int numberOfTurns = 0;
+
+  // // Allow the player to keep going until they have hit all four ships
+  // while (hits < 4) {
+  //   int row, column;
+
+  //   cout << "Selecting coordinates\n";
+
+  //   // Ask the player for a row
+  //   cout << "Choose a row number between 0 and 3: ";
+  //   cin >> row;
+
+  //   // Ask the player for a column
+  //   cout << "Choose a column number between 0 and 3: ";
+  //   cin >> column;
+
+  //   // Check if a ship exists in those coordinates
+  //   if (ships[row][column]) {
+  //     // If the player hit a ship, remove it by setting the value to zero.
+  //     ships[row][column] = 0;
+
+  //     // Increase the hit counter
+  //     hits++;
+
+  //     // Tell the player that they have hit a ship and how many ships are left
+  //     cout << "Hit! " << (4-hits) << " left.\n\n";
+  //   } else {
+  //     // Tell the player that they missed
+  //     cout << "Miss\n\n";
+  //   }
+
+  //   // Count how many turns the player has taken
+  //   numberOfTurns++;
+  // }
+
+  // cout << "Victory!\n";
+  // cout << "You won in " << numberOfTurns << " turns" << endl;
+
+
+  // cout << "======== HITTING GAME ENDS =======" endl;
+
+
+
+  // // multi-dimension arrays 
+  // cout << "======== looping multi-dimensional arrays =======" << endl;
+
+  // string letters[2][2][4] = {
+  //   {
+  //     { "A", "B", "C", "D" },
+  //     { "E", "F", "G", "H" },
+  //   },
+  //   {
+  //     { "I", "J", "K", "L" },
+  //     { "M", "N", "O", "P" },
+  //   }
+  // };
+
+  // for (int i = 0; i < 2; i++) {
+  //   for (int j = 0; j < 2; j++) {
+  //     for (int k = 0; k < 4; k++)
+  //     {
+  //       cout << letters[i][j][k] << endl;
+  //     }      
+  //   }
+  // }
+
+
+
+
+  // // finding an average of the given ages;
+
+  // cout << "======== PRINTING THE AVERAGE AGE =======";
+
+  // int ages[8] = {20, 22, 18, 35, 48, 26, 87, 70};
+  // float avg, sum = 0;
+
+  // int length = sizeof(ages) / sizeof(ages[0]);
+
+  // for (int age : ages) {
+  //   sum += age;
+  // }
+
+  // avg = sum / length;
+
+  // cout << "The sum of the ages is: " << sum << endl;
+  // cout << "The length of the array is: " << length << endl;
+  // cout << "The average age of the entries is: " << avg << endl;
+
+
+  // cout << "======== END OF PRINTING THE AVERAGE AGE =======";
 
 
 
