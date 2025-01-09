@@ -4,35 +4,129 @@ using namespace std;
 
 
 
+  // a car struct 
   struct car {
     string brand;
     string model;
     int year;
   };
 
+  // an emum
+  enum Level {
+    LOW = 40,
+    MEDIUM = 60,
+    HIGH = 85,
+  };
+
 
 int main() {
 
 
-  // WORKING WITH STRUCTS 
-
-  car car1;
-
-  car1.brand = "Ferrari";
-  cout << "My car is a: " << car1.brand << endl;
+  // POINTERS  
+  // A pointer however, is a 
+  //variable that stores the memory address as its value.
 
 
-  struct {
-    int age;
-    string firstName;
-    string lastName;
-  } myDetails;
   
-  myDetails.age = 26;
-  myDetails.firstName = "Peter";
-  myDetails.lastName = "Mwansa";
+  string food = "Apples";
+  string* ptr = &food;
+  cout << food << endl;
+  cout << &food << endl;
+  cout << ptr << endl;
 
-  cout << "My age is: " << myDetails.age << endl;
+
+  // dereferencing a pointer 
+  string fruit = "Banana";
+  string* fruitPtr = &fruit;
+  cout << "The address is: " << fruitPtr << " and the value stored there is: " << *fruitPtr << endl;
+
+  // changing the pointer value 
+
+  string hero = "Superman";
+  string *heroPtr = &hero;
+
+  cout << "This prints the original value: " << hero << endl;
+  cout << "This prints the address stored by the pointer: " << heroPtr << endl;
+  cout << "This prints the value stored by the pointer through dereferencing: " << *heroPtr << endl;
+
+  // after the modification of the value stored through a pointer 
+  *heroPtr = "Spiderman";
+  cout << "This prints the value changed after modification bt the pointer: " << hero << endl;
+
+
+
+
+
+  // // REFERENCES 
+
+  // string food = "Apples";
+  // string &meal = food;
+
+  // cout << food << endl;
+  // cout << meal << endl;
+
+  // cout << "======= PRINTING OUT THE MEMORY ADDRESS =======" << endl;
+  // string animal = "Cat";
+  // cout << "The memory address of the variable is: " << &animal << endl;
+  // string &pet = animal;
+  // cout << "The memory address of the reference variable is: " << &pet << endl;
+  
+
+
+
+
+
+
+
+
+
+  // // WORKING WITH ENUMS
+  // // a special type that represents a group of constants
+  // enum Level mylevel = HIGH;
+
+  // switch (mylevel)
+  // {
+  // case 40:
+  //   cout << "I am on the low level" << endl;
+  //   break;
+  
+  // case 60:
+  //   cout << "I am on the middle level" << endl;
+  //   break;
+  // case 85:
+  //   cout << "I am on the high level" << endl;
+  //   break;
+  
+  // default:
+  //   break;
+  // }
+
+
+
+
+
+
+
+
+  // // WORKING WITH STRUCTS 
+  // // they are used to group data of different data types but are related 
+  // car car1;
+
+  // car1.brand = "Ferrari";
+  // cout << "My car is a: " << car1.brand << endl;
+
+
+  // struct {
+  //   int age;
+  //   string firstName;
+  //   string lastName;
+  // } myDetails;
+  
+  // myDetails.age = 26;
+  // myDetails.firstName = "Peter";
+  // myDetails.lastName = "Mwansa";
+
+  // cout << "My age is: " << myDetails.age << endl;
 
 
 
